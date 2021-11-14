@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define false 0
 
+// task 1
 void fillMatrix(int mat[10][10]){
     int currPlace;
     for(int i = 0; i < 10; i++){
