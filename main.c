@@ -18,9 +18,9 @@ int main(){
             scanf("%d %d", &i,&j);
             int res = isTherePath(matrix , i , j);
             if(res == 0){
-                printf("false");
+                printf("False");
             }else{
-                printf("true");
+                printf("True");
             }
             scanf("%c" , &func);
         }else if(func == 'C'){
