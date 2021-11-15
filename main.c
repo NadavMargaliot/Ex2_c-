@@ -7,7 +7,7 @@ int main(){
     while(func != 'D'){
         scanf("%c" , &func);
         if(func == 'A'){
-            fillMatrix(matrix);
+            fillMatrixFromInput(matrix);
             takeShortestPath(matrix);
         }else if(func == 'B'){
             int i , j;
