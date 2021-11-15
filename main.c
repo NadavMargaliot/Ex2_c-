@@ -3,23 +3,33 @@
 
 int main(){
     int matrix[10][10];
+    int copied[10][10];
+    int i;
+    int j;
     char func;
+    scanf("%c" , &func);
     while(func != 'D'){
-        scanf("%c" , &func);
         if(func == 'A'){
             fillMatrixFromInput(matrix);
-            takeShortestPath(matrix);
+            scanf("%c" , &func);
         }else if(func == 'B'){
-            int i , j;
+            copyMatrix(matrix , copied);
+            takeShortestPath(copied);
             scanf("%d %d", &i,&j);
-            isTherePath(matrix , i , j);
+            int res = isTherePath(matrix , i , j);
+            if(res == 0){
+                printf("false");
+            }else{
+                printf("true");
+            }
+            scanf("%c" , &func);
         }else if(func == 'C'){
-            int i , j;
+            copyMatrix(matrix , copied);
+            takeShortestPath(copied);
             scanf("%d %d", &i,&j);
-            printShortestPath(matrix , i , j);
+            printf("%d" ,shortestPath(matrix , i , j));
+            scanf("%c" , &func);
         }
-
     }
-    
-
+    return 0;
 }
