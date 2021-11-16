@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "my_mat.h"
 #define false 0
 #define true  1
 #define noPath -1
@@ -29,9 +30,12 @@ void takeShortestPath(int minDestination[10][10]){
                 if (minDestination[i][k] == 0 || minDestination[k][j] == 0){
                     continue;
                 }
-                if(minDestination[i][j] > minDestination[i][k] + minDestination[k][j]){
+                if((minDestination[i][j] == 0) && (i != j)){
+                    minDestination[i][j] = minDestination[i][k] + minDestination[k][j];
+                }else if(minDestination[i][j] > minDestination[i][k] + minDestination[k][j]){
                     minDestination[i][j] = minDestination[i][k] + minDestination[k][j];
                 }
+                
             }
         }
     }
