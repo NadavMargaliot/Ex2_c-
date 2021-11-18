@@ -42,20 +42,21 @@ void takeShortestPath(int mat[size][size]){
     }
 }
 
-int min(int num1, int num2) 
-{
-    if(num1>num2){
-        return num2;
-    }
-    else{
-        return num1;
-    }
-}
+// int min(int num1, int num2) 
+// {
+//     if(num1>num2){
+//         return num2;
+//     }
+//     else{
+//         return num1;
+//     }
+// }
 
 // task 2
 int isTherePath(int mat[size][size]){
     int i , j;
-    scanf("%d" , "%d" , i , j);
+    scanf("%d" , &i);
+    scanf("%d" , &j);
     if(mat[i][j] == false){
         return false;
     }
@@ -64,7 +65,8 @@ int isTherePath(int mat[size][size]){
 // task 3
 int shortestPath(int mat[size][size]){
     int i , j;
-    scanf("%d" , "%d" , i , j);
+    scanf("%d" , &i);
+    scanf("%d" , &j);
     if(mat[i][j] == false){
         return noPath;
     }
