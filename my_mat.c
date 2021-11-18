@@ -31,14 +31,12 @@ void takeShortestPath(int mat[size][size]){
                 if (mat[i][k] == 0 || mat[k][j] == 0){
                     continue;
                 }
-                // if((minDestination[i][j] == 0) && (i != j)){
-                //     minDestination[i][j] = minDestination[i][k] + minDestination[k][j];
-                // }else if(minDestination[i][j] > minDestination[i][k] + minDestination[k][j]){
-                //     minDestination[i][j] = minDestination[i][k] + minDestination[k][j];
-                // }
-                int x = (mat[i][k] + mat[k][j]);
-                mat[i][j] = min(mat[i][j], x);
-                
+                if(mat[i][j] == 0 && i != j){
+                    mat[i][j] = mat[i][k] + mat[k][j];
+                }
+                else if(mat[i][j] > mat[i][k] + mat[k][j]){
+                    mat[i][j] = mat[i][k] + mat[k][j];
+                }
             }
         }
     }
@@ -55,14 +53,18 @@ int min(int num1, int num2)
 }
 
 // task 2
-int isTherePath(int mat[size][size], int i, int j){
+int isTherePath(int mat[size][size]){
+    int i , j;
+    scanf("%d" , "%d" , i , j);
     if(mat[i][j] == false){
         return false;
     }
     return true;
 }
 // task 3
-int shortestPath(int mat[size][size],int i, int j){
+int shortestPath(int mat[size][size]){
+    int i , j;
+    scanf("%d" , "%d" , i , j);
     if(mat[i][j] == false){
         return noPath;
     }

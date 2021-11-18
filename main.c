@@ -8,15 +8,15 @@ int main(){
     int i;
     int j;
     char func;
+    scanf("%c" , &func);
     while(func != 'D'){
-        scanf("%c" , &func);
         if(func == 'A'){
             fillMatrixFromInput(matrix);
             takeShortestPath(matrix);
         }else if(func == 'B'){
             copyMatrix(matrix , copied);
             takeShortestPath(copied);
-            int res = isTherePath(matrix , i , j);
+            int res = isTherePath(matrix);
             if(res == 0){
                 printf("False");
             }else{
@@ -25,9 +25,9 @@ int main(){
         }else if(func == 'C'){
             copyMatrix(matrix , copied);
             takeShortestPath(copied);
-            scanf("%d %d", &i,&j);
-            printf("%d" ,shortestPath(matrix , i , j));
+            printf("%d" ,shortestPath(matrix));
         }
+        scanf("%c" , &func);
     }
     return 0;
 }
