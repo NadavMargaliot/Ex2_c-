@@ -12,7 +12,7 @@ int main(){
     while(func != 'D'){
         if(func == 'A'){
             fillMatrixFromInput(matrix);
-            //takeShortestPath(matrix);
+            takeShortestPath(matrix);
         }else if(func == 'B'){
             copyMatrix(matrix , copied);
             takeShortestPath(copied);

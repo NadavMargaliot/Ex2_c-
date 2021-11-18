@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "my_mat.h"
-#define false 0
-#define true  1
+#define False 0
+#define True  1
 #define noPath -1
 #define size 10
 
@@ -42,32 +42,23 @@ void takeShortestPath(int mat[size][size]){
     }
 }
 
-// int min(int num1, int num2) 
-// {
-//     if(num1>num2){
-//         return num2;
-//     }
-//     else{
-//         return num1;
-//     }
-// }
 
 // task 2
 int isTherePath(int mat[size][size]){
     int i , j;
     scanf("%d" , &i);
     scanf("%d" , &j);
-    if(mat[i][j] == false){
-        return false;
+    if(mat[i][j] == False){
+        return False;
     }
-    return true;
+    return True;
 }
 // task 3
 int shortestPath(int mat[size][size]){
     int i , j;
     scanf("%d" , &i);
     scanf("%d" , &j);
-    if(mat[i][j] == false){
+    if(mat[i][j] == False){
         return noPath;
     }
     return mat[i][j];
