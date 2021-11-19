@@ -18,14 +18,14 @@ int main(){
             takeShortestPath(copied);
             int res = isTherePath(matrix);
             if(res == 0){
-                printf("False");
+                printf("False\n");
             }else{
-                printf("True");
+                printf("True\n");
             }
         }else if(func == 'C'){
             copyMatrix(matrix , copied);
             takeShortestPath(copied);
-            printf("%d" ,shortestPath(matrix));
+            printf("%d\n" ,shortestPath(matrix));
         }
         scanf("%c" , &func);
     }
